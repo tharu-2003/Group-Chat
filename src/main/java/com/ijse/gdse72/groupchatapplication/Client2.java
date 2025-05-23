@@ -6,8 +6,7 @@ import java.io.IOException;
 import java.net.Socket;
 import java.util.Scanner;
 
-public class ClientPageController {
-
+public class Client2 {
     static String clientName;
     Socket socket;
     DataOutputStream dos;
@@ -65,7 +64,7 @@ public class ClientPageController {
 
     public String sendMessage(String msg) {
         try {
-            dos.writeUTF(clientName +" : " +msg);
+            dos.writeUTF(clientName + " : " + msg);
             dos.flush();
             System.out.println("Your msg : " + msg);
             return "Ok";
@@ -73,8 +72,4 @@ public class ClientPageController {
             throw new RuntimeException(e);
         }
     }
-
-
-
-
 }
